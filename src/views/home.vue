@@ -41,7 +41,7 @@ export default {
     document.title = '出租房屋公示'
     const { query: { home } } = this.$route
     this.home = home
-    axios.get(`/api/home?home=${home}`).then(({ data }) => {
+    axios.get(`https://gxzh.cdht.gov.cn/house/home?home=${home}`).then(({ data }) => {
       this.homes = _.sortBy(data, item => (Number(item.building))).map(item => ({
         id: item.building,
         building: `${item.building}栋`

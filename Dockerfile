@@ -1,12 +1,5 @@
-FROM node:lts-alpine as build-stage
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-
-FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/crane-target /usr/share/nginx/html
-COPY --from=build-stage /app/conf /etc/nginx/conf.d
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+FROM registry.cn-hangzhou.aliyuncs.com/skylark/saler-nginx:1.18.0-alpine
+COPY ./guixi/ /usr/share/nginx/html/guixi_test
+COPY ./conf.d /etc/nginx/conf.d
+WORKDIR /usr/share/nginx/html
+EXPOSE 8080

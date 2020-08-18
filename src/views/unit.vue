@@ -118,7 +118,7 @@ export default {
 
   methods: {
     doRequest () {
-      axios.get(`/api/unit?home=${this.home}&building=${this.building}&unit=${this.unit}`).then(({ data }) => {
+      axios.get(`https://gxzh.cdht.gov.cn/house/unit?home=${this.home}&building=${this.building}&unit=${this.unit}`).then(({ data }) => {
         this.floors = _.chain(data)
         .groupBy(item => (item.floor))
         .map((room, key) => ({

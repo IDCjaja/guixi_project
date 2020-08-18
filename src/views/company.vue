@@ -60,7 +60,7 @@ export default {
 
   methods: {
     doRequst () {
-      axios.get(`/api/company?company=${this.company}`).then(({ data: [data] }) => {
+      axios.get(`https://gxzh.cdht.gov.cn/house/company?company=${this.company}`).then(({ data: [data] }) => {
         this.information = data || {}
       })
     },

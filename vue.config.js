@@ -1,5 +1,6 @@
 module.exports = {
-  publicPath: '/',
+  publicPath: '/guixi_test',
+  outputDir: 'guixi',
   pluginOptions: {
     i18n: {
       locale: 'yes',
@@ -18,4 +19,31 @@ module.exports = {
       },
     },
   },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8848',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': 'http://localhost:8848'
+        }
+      },
+      '/v4': {
+        target: 'https://gxzh.cdht.gov.cn/api',
+        ws: true,
+        changeOrigin: true,
+      },
+      '/v1': {
+        target: 'https://gxzh.cdht.gov.cn/api',
+        ws: true,
+        changeOrigin: true,
+      },
+      '/oauth': {
+        target: 'https://gxzh.cdht.gov.cn',
+        ws: true,
+        changeOrigin: true,
+      },
+    }
+  }
 }

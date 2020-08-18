@@ -56,7 +56,7 @@ export default {
       this.home = home
       this.building = building
 
-      axios.get(`/api/building?home=${home}&building=${building}`).then(({ data }) => {
+      axios.get(`https://gxzh.cdht.gov.cn/house/building?home=${home}&building=${building}`).then(({ data }) => {
         this.units = data.map(item => ({
           id: item.unit,
           unit: item.unit

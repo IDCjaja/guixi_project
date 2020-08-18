@@ -7,7 +7,6 @@ Vue.prototype.baseUrl = guixiVue.baseUrl
 Vue.prototype.baseCompany = guixiVue.baseCompany
 Vue.prototype.baseDescription = guixiVue.baseDescription
 
-
 export default new Router({
   mode: 'history',
   base: '/guixi_test',
@@ -15,37 +14,37 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: () => import('@/components/home')
+      component: () => import('./views/home')
     },
     {
       path: '/building',
       name: 'building',
-      component: () => import('@/components/building')
+      component: () => import('./views/building')
     },
     {
       path: '/unit',
       name: 'unit',
-      component: () => import('@/components/unit')
+      component: () => import('./views/unit')
     },
     {
       path: '/company',
       name: 'company',
-      component: () => import('@/components/company')
+      component: () => import('./views/company')
     },
     {
       path: '/enterprise',
       name: 'enterprise',
-      component: () => import('@/components/enterprise')
+      component: () => import('./views/enterprise')
     },
     {
       path: '/authorized',
       name: 'authorized',
-      component: () => import('@/components/authorized')
+      component: () => import('./views/authorized')
     },
     {
       path: '*',
       name: '404',
-      component: () => import('@/components/404')
+      component: () => import('./views/404')
     },
   ]
 })

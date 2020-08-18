@@ -131,14 +131,14 @@ export default {
     },
 
     doRequst () {
-      axios.get(`/api/enterprise?company=${this.company}`).then(({ data: [data] }) => {
+      axios.get(`https://gxzh.cdht.gov.cn/house/enterprise?company=${this.company}`).then(({ data: [data] }) => {
         this.information = data || {}
       })
     },
 
     fileClickedFunc (fileName) {
       this.url = fileName
-      axios.get(`/v4/forms/72/responses`, {
+      axios.get(`https://gxzh.cdht.gov.cn/api/v4/forms/72/responses`, {
         headers: {
           Authorization: '7372dee4ff2e6b3876e3b386a336a9171444fba5d3a1e5ae3e23c91d92bb68c6:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lc3BhY2VfaWQiOjF9.WXenxuBIxXEgy_YSmk-PRoElIK7f_gP995N5vdCqSAo'
         }

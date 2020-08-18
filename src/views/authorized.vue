@@ -35,7 +35,7 @@ export default {
     goToUrlFunc(code) {
       axios({
         method: "POST",
-        url: "/oauth/token",
+        url: "https://gxzh.cdht.gov.cn/oauth/token",
         headers: { "Content-Type": "application/json" },
         params: {
           client_id: "3ce843694f2d224f2769851ed5cb06baf201630cb129acfa732bb62b718c5223",
@@ -46,7 +46,7 @@ export default {
         },
       }
       ).then(({ data: { access_token } }) => {
-        axios.get(`/v1/user?access_token=${access_token}`).then(({ data: {root_organization_ids} }) => {
+        axios.get(`https://gxzh.cdht.gov.cn/api/v1/user?access_token=${access_token}`).then(({ data: {root_organization_ids} }) => {
           const authorize = root_organization_ids.includes(268)
           this.$router.push({ path :'company', query: {authorize: authorize, company: localStorage.getItem('company')} })
         })

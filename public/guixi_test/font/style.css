@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./icomoon.eot?kp1szl');
+  src:  url('./icomoon.eot?kp1szl#iefix') format('embedded-opentype'),
+    url('./icomoon.ttf?kp1szl') format('truetype'),
+    url('./icomoon.woff?kp1szl') format('woff'),
+    url('./icomoon.svg?kp1szl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  /* speak: none; */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Icon_file:before {
+  content: "\e902";
+  color: #13227a;
+}
+.icon-icon_image:before {
+  content: "\e903";
+  color: #1296db;
+}
+.icon-Icon_excel:before {
+  content: "\e904";
+  color: #217346;
+}
+.icon-Icon_pdf:before {
+  content: "\e905";
+  color: #a33639;
+}
+.icon-Icon_word:before {
+  content: "\e906";
+  color: #2b579a;
+}
+.icon-icon_danyuan:before {
+  content: "\e900";
+}
+.icon-icon_dong:before {
+  content: "\e901";
+}
+.icon-arrow_left:before {
+  content: "\e9d4";
+}
+.icon-download_o:before {
+  content: "\e9b7";
+}
