@@ -2,7 +2,7 @@
   <div class="community-home">
     <div class="community-home-head">
       <div class="head-left">
-        <img alt class="home-logo" src="public/guixi_test/img/image_logo.png" />
+        <img alt class="home-logo" src="../../../public/guixi_test/img/image_logo.png" />
       </div>
       <div class="head-right">
         <div class="company-name">成都高新区桂溪街道办事处</div>
@@ -40,7 +40,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3.75rem;
+  margin-top: 1rem;
   height: 6.5rem;
   background-color: white;
   border-radius: .3rem;
