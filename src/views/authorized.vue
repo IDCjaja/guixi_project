@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       clientId: '3ce843694f2d224f2769851ed5cb06baf201630cb129acfa732bb62b718c5223',
-      redirectUrl: 'http://localhost:8080/guixi_test/authorized',
+      redirectUrl: 'https://gxzh.cdht.gov.cn/guixi_test/authorized',
     }
   },
 
@@ -42,7 +42,7 @@ export default {
           client_secret: "22b2d2a2890b7a0ea3ac0fe2689792187b6560268ca98d11e71e04b42ef90737",
           code: this.code,
           grant_type: "authorization_code",
-          redirect_uri: "http://localhost:8080/guixi_test/authorized",
+          redirect_uri: "https://gxzh.cdht.gov.cn/guixi_test/authorized",
         },
       }
       ).then(({ data: { access_token } }) => {
