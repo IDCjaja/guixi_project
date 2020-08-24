@@ -94,7 +94,7 @@ export default {
       building: '',
       opened: false,
       status: '',
-      redirectUrl: '',
+      redirectUrl: 'https://gxzh.cdht.gov.cn/namespaces/1/yet_another_workflow/flows/486/journeys/new',
       ignoreScrollEvent: false,
       startY: 0,
       floors: []
@@ -134,7 +134,7 @@ export default {
     openModal () {
       this.opened = true
       setTimeout(() => {
-        this.opened = false
+        location.href = this.redirectUrl
       }, 3000)
     },
 
@@ -189,8 +189,6 @@ export default {
       this.ignoreScrollEvent = true
       relate.scrollTop = target.scrollTop
     },
-
-
 
     touchEvents () {
       document.body.addEventListener('touchstart', (e) => {
@@ -328,6 +326,7 @@ export default {
 
 .body-table {
   overflow: hidden;
+  flex: 1;
 }
 
 .body-table-wrapper > .scroll-container {
@@ -340,12 +339,15 @@ export default {
   width: 100%;
 }
 
+.body-table-wrapper > .scroll-container table td{
+  min-width: 2.25rem;
+}
+
 .body-table-wrapper > .scroll-container::-webkit-scrollbar {
   display: block;
 }
 
 table {
-  table-layout: fixed;
   border-collapse: collapse;
 }
 
