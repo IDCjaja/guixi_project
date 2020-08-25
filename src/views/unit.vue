@@ -124,7 +124,7 @@ export default {
         .map((room, key) => ({
           floor: {
             id: key,
-            floordata: _.sortBy(room, item => item.room)
+            floordata: _.sortBy(room, item => Number(item.room))
           },
         }))
         .value()

@@ -104,6 +104,7 @@ export default {
       roster: '',
       filePreviewShow: false,
       companyQueryUrl: 'http://scldrk.com:9080/',
+      updateUrl: 'https://gxzh.cdht.gov.cn/namespaces/1/yet_another_workflow/flows/488/journeys/new',
       information: {},
       authorize: true,
       showButton: true,

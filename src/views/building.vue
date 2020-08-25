@@ -28,6 +28,7 @@
 <script>
 import HomeHeader from './pages/header'
 import axios from 'axios'
+import _ from 'lodash'
 
 export default {
   name: 'Building',
@@ -57,10 +58,11 @@ export default {
       this.building = building
 
       axios.get(`https://gxzh.cdht.gov.cn/house/building?home=${home}&building=${building}`).then(({ data }) => {
-        this.units = data.map(item => ({
+        const units = data.map(item => ({
           id: item.unit,
           unit: item.unit
         }))
+        this.units = _.sortBy(units, unit => Number(unit.unit))
       })
     }
   }
