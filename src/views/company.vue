@@ -55,6 +55,9 @@ export default {
     const {query: { company, authorize } } = this.$route
     this.company = company
     this.authorize = authorize
+    if(authorize === undefined) {
+      this.$router.push({path: 'authorized', query: {company: company}})
+    }
     this.doRequst()
   },
 
