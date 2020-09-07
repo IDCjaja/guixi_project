@@ -15,7 +15,7 @@
               <div class="left-head">治安责任书</div>
               <div class="right-body">
                 <File
-                  :fileName="information.public_security_responsibility_letter"
+                  :fileName="generateFileName(information.public_security_responsibility_letter)"
                   @fileClicked="fileClickedFunc"
                 />
               </div>
@@ -27,7 +27,7 @@
               </div>
               <div class="right-body">
                 <File
-                  :fileName="information.roster"
+                  :fileName="generateFileName(information.roster)"
                   @fileClicked="fileClickedFunc"
                 />
               </div>
@@ -36,7 +36,7 @@
               <div class="left-head">登记表</div>
               <div class="right-body">
                 <File
-                  :fileName="information.registration_form"
+                  :fileName="generateFileName(information.registration_form)"
                   @fileClicked="fileClickedFunc"
                 />
               </div>
@@ -45,7 +45,7 @@
               <div class="left-head">单位调查表</div>
               <div class="right-body">
                 <File
-                  :fileName="information.work_unit_questionnaire"
+                  :fileName="generateFileName(information.work_unit_questionnaire)"
                   @fileClicked="fileClickedFunc"
                 />
               </div>
@@ -54,7 +54,7 @@
               <div class="left-head">网格员工作痕迹</div>
               <div class="right-body">
                 <File
-                  :fileName="information.grid_work_traces"
+                  :fileName="generateFileName(information.grid_work_traces)"
                   @fileClicked="fileClickedFunc"
                 />
               </div>
@@ -147,19 +147,19 @@ export default {
         const response = _.find(res.data, item => item.id === this.information.response_id)
         const mappedValues = response.mapped_values
         switch (fileName) {
-          case this.information.public_security_responsibility_letter:
+          case this.generateFileName(this.information.public_security_responsibility_letter):
             this.files = mappedValues.public_security_responsibility_letter.value
             break
-          case this.information.roster:
+          case this.generateFileName(this.information.roster):
             this.files = mappedValues.roster.value
             break
-          case this.information.registration_form:
+          case this.generateFileName(this.information.registration_form):
             this.files = mappedValues.registration_form.value
             break
-          case this.information.work_unit_questionnaire:
+          case this.generateFileName(this.information.work_unit_questionnaire):
             this.files = mappedValues.work_unit_questionnaire.value
             break
-          case this.information.grid_work_traces:
+          case this.generateFileName(this.information.grid_work_traces):
             this.files = mappedValues.grid_work_traces.value
             break
           default:
@@ -180,6 +180,12 @@ export default {
 
     indexChangedFunc (index) {
       this.index = index
+    },
+
+    generateFileName(filename) {
+      return _.reduce(filename, (acc, item, key) => {
+        return `${acc}, ${key}`
+      }, '')
     }
   }
 }

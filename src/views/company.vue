@@ -8,7 +8,7 @@
         <div class="title">{{ company }}</div>
         <div class="list">
           <div class="list-item">
-            <div class="left-head">企业联络人及联系方式</div>
+            <div class="left-head">企业联络人及联系电话</div>
             <div class="right-body">{{ information.business_contact }}</div>
           </div>
           <div class="list-item">
