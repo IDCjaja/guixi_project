@@ -2,7 +2,7 @@
   <div class="community-home">
     <div class="community-home-head">
       <div class="head-left">
-        <img alt class="home-logo" src="../../../public/guixi_test/img/image_logo.png" />
+        <img alt class="home-logo" src="../../../public/guixi_app/img/image_logo.png" />
       </div>
       <div class="head-right">
         <div class="company-name">成都高新区桂溪街道办事处</div>

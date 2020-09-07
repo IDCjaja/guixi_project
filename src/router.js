@@ -9,7 +9,7 @@ Vue.prototype.baseDescription = guixiVue.baseDescription
 
 export default new Router({
   mode: 'history',
-  base: '/guixi_test',
+  base: '/guixi_app',
   routes: [
     {
       path: '/home',

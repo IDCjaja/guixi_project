@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-@import '../public/guixi_test/font/style.css';
+@import '../public/guixi_app/font/style.css';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

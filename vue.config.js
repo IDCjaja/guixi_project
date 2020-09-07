@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/guixi_test',
+  publicPath: '/guixi_app',
   outputDir: 'guixi',
   pluginOptions: {
     i18n: {

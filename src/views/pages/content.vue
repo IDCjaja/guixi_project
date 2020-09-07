@@ -5,7 +5,7 @@
         <div :key="item.id" class="item" v-for="item in building">
           <a
             class="community-home-body-item"
-            href="/guixi_test/building?home=%E9%95%BF%E5%9F%8E%E5%8D%97%E8%8B%91&amp;building=1"
+            href="/guixi_app/building?home=%E9%95%BF%E5%9F%8E%E5%8D%97%E8%8B%91&amp;building=1"
           >
             <i class="icon-icon_dong"></i>
             {{item.id}}

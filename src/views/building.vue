@@ -72,7 +72,7 @@ export default {
 <style scoped>
 .bg {
   position: absolute;
-  background: url(../../public/guixi_test/img/image_bg.png) no-repeat;
+  background: url(../../public/guixi_app/img/image_bg.png) no-repeat;
   background-size: cover;
   padding: 0rem 1rem;
   top: 0rem;
